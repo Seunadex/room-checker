@@ -1,0 +1,44 @@
+// @import "materialize/components/color";
+// $primary-color: color("blue", "lighten-2") !default;
+// $secondary-color: color("yellow", "base") !default;
+@import "materialize";
+
+html, body{
+    min-height: 100%;
+  }
+  body{
+    position: relative;
+    font-family: 'Lobster', cursive;
+  }
+
+div.index {
+    background: url('room2.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+div.overlay {
+    position: absolute;
+    background-color: rgba(5, 56, 107, 0.28);
+    height: 100%;
+    width: 100%;
+}
+
+.welcome > h1 {
+    margin-top: 10%;
+    color: #05386b;
+    
+}
+
+.btn {
+    font-family: 'Acme', sans-serif;
+}
+
+.view-room {
+    color: #fff;
+}
