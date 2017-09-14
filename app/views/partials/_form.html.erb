@@ -1,0 +1,6 @@
+<%= simple_form_for @room do |f| %>
+  <%= f.input :name, label: 'Room name', placeholder: 'Room', error: 'Room name is mandatory, please specify one' %>
+  <%= f.input :location, hint: 'specify floor and wing' %>
+  <%= f.input :capacity %>
+  <%= f.button :submit %>
+<% end %>
