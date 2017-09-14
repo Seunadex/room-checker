@@ -15,8 +15,9 @@ ActiveRecord::Schema.define(version: 20170913012329) do
   create_table "rooms", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.integer "capacity"
+    t.string "capacity"
     t.boolean "availability"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

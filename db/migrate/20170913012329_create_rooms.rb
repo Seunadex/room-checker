@@ -3,8 +3,9 @@ class CreateRooms < ActiveRecord::Migration[5.1]
     create_table :rooms do |t|
       t.string :name
       t.string :location
-      t.integer :capacity
+      t.string :capacity
       t.boolean :availability
+      t.string :image
 
       t.timestamps
     end
