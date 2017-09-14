@@ -44,9 +44,19 @@ div.overlay {
 }
 
 .image {
+    background-color: rgba(34, 104, 190, 0.28);
     height: 200px;
     width: 100%;
-    background-color: rgba(34, 104, 190, 0.28);
+}
+
+.desc {
+    // margin: 0 50px;
+}
+
+.image-tag {
+    height: 400px;
+    width: 100%;
+    // margin: 0 -90px;
 }
 
 .nav-wrapper {
@@ -57,7 +67,7 @@ div.overlay {
 }
 
 .single-room {
-    margin-top: 60px;
+    margin: 60px;
 
 }
 
@@ -65,16 +75,14 @@ div.overlay {
     background-color: #05386b;
 }
 
-// .welcome-nav, nav, .nav-wrapper {
-//     background: initial !important;
-//     color: black;
-// }
-
-// .nav-wrapper {
-//     background: transparent;
-    
-// }
 a.brand-logo {
     color: #46B0D4;
+}
+
+.form {
+    margin: 0px 20%;
+    @media screen and (max-width: 600px) {
+        margin: 0px 5%;
+    }
 }
 

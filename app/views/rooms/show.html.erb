@@ -1,32 +1,37 @@
 <%= render "partials/navbar" %>
 <div class="single-room">
-<div class="container">
   <div class="row">
     <div class="col s12 m7">
-      <div class="image"><%= image_tag @room.image %></div>
+      <div><%= image_tag @room.image, class: 'image-tag' %></div>
     </div>
     <div class="col s6 m5">
       <div class="row">
-        <div class="col m12">
-          <h2><%= @room.name %></h2>
-        </div>
-        <div class="col m12">
-          <p>Description: coming soon</p>
-         </div>
-         <div class="col m6">
-          <p>Location: <%= @room.location %></p>
-        </div>
-        <div class="col m6">
-          <p>Capacity: <%= @room.capacity %></p>
-        </div>
-        <div class="col m6">
-          <p>Availability: <%= @room.availability %></p>
-      </div>
-      <div class="col m6">
-        <button class="waves-effect blue waves-light btn"><i class="material-icons right">cloud</i>Book Room</button>
+        <div class="desc">
+          <div class="col m12">
+            <h2><%= @room.name %></h2>
+          </div>
+          <div class="col m12">
+            <p>Description: coming soon</p>
+          </div>
+          <div class="col m6">
+            <p>Location: <%= @room.location %></p>
+          </div>
+          <div class="col m6">
+            <p>Capacity: <%= @room.capacity %></p>
+          </div>
+          <div class="col m6">
+            <p>Availability: <%= @room.availability %></p>
+          </div>
+          <div class="col m6">
+            <button class="waves-effect blue waves-light btn"><i class="material-icons right">cloud</i>Book Room</button>
+          </div>
+          <div class="col m6">
+            <%= link_to 'Edit', edit_room_path(@room), class: 'waves-effect blue waves-light btn' %>
+          </div>
+          <div class="col m6">
+            <%= link_to 'Delete', room_path(@room), method: :delete, data: { confirm: 'Are you sure you want to delete the room?' }, class: 'waves-effect blue waves-light btn' %>
+          </div>
       </div>
     </div>
   </div>
 </div>
-</div>
-<%= render "partials/footer" %>

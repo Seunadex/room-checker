@@ -25,6 +25,19 @@ class RoomsController < ApplicationController
       
     end
 
+    def update
+      if @room.update(room_params)
+        redirect_to room_path(@room)
+      else
+        render 'edit'
+      end
+    end
+
+    def destroy
+      @room.destroy
+      redirect_to rooms_path
+    end
+
     private
     def room_params
       params.require(:room).permit(:name, :location, :capacity)
