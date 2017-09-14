@@ -1,12 +1,12 @@
 class RoomsController < ApplicationController
     def index
-        
+      @rooms = Room.all
     end
-    def home
-        @rooms = Room.all
+    def room
+      
     end
 
     def show
-        @room = Room.find(params[:id])
+      @room = Room.find(params[:id])
     end
 end

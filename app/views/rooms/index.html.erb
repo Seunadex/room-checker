@@ -1,16 +1,29 @@
-<nav>
-<div class="nav-wrapper">
-  <a href="#" class="brand-logo">RoomChecker</a>
-  <ul id="nav-mobile" class="right hide-on-med-and-down">
-  </ul>
-</div>
-</nav>
-<div class="index">
-    <div class="overlay">
-        <div class="welcome">
-            <h1>Welcome! Need a room?</h1>
-                    <button class="waves-effect blue waves-light btn"><i class="material-icons left">room</i><%= link_to "View all Rooms", home_path, class: 'view-room' %>
-                    </button>
+<%= render "partials/navbar" %>
+<h1>Rooms</h1>
+<div class="row">
+    <% @rooms.each do |room| %>
+        <div class="col s12 m4">
+            <div class="row room-list">
+                <div class="col s12 m12">
+                    <div class="image"></div>
+                </div>
+                <div class="col s12 m12">
+                    <h4><%= room.name %></h4>
+                </div>
+                <div class="col s6 m6">
+                    <p>Location: <%= room.location %></p>
+                </div>
+                <div class="col s6 m6">
+                    <p>Capacity: <%= room.capacity %></p>
+                </div>
+                <div class="col s6 m6">
+                    <p>Availability: <%= room.availability %></p>
+                </div>
+                <div class="col s6 m6">
+                <button class="waves-effect blue waves-light btn"><i class="material-icons right">cloud</i><%= link_to 'View', room_path(room), class: 'view-room' %></button>
+                </div>
+            </div>
         </div>
-    </div>
+    <% end %>
 </div>
+<%= render "partials/footer" %>
