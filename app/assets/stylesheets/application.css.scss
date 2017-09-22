@@ -1,0 +1,157 @@
+// @import "materialize/components/color";
+// $primary-color: color("blue", "lighten-2") !default;
+// $secondary-color: color("yellow", "base") !default;
+
+p.alert, p.notice {
+    position: absolute;
+    top: 70px;
+    width: 25%;
+    z-index: 999;
+    background: rgba(135, 216, 211, 0.85);
+    padding: 1rem 0;
+    text-align: center;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #05386b;
+    letter-spacing: 1px;
+}
+// p.alert, p.notice {
+//     padding: 2.5rem 0;
+//     text-align: center;
+//     margin: 0;
+//     font-size: 1.2rem;
+//     font-weight: 700;
+//     color: #fff;
+//     letter-spacing: 1px;
+// }
+
+@import "materialize";
+
+html, body{
+    min-height: 100%;
+  }
+  body{
+    position: relative;
+    font-family: 'Lobster', cursive;
+  }
+  div.index {
+    text-align: center;
+    background: image-url('room2.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    margin-top: -20px;
+}
+
+div.auth {
+    background: image-url('room2.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    margin-top: -20px;
+}
+
+
+
+div.overlay {
+    position: absolute;
+    background-color: rgba(5, 56, 107, 0.41);
+    height: 100%;
+    width: 100%;
+    // margin-top: -20px;
+}
+
+.welcome > h1 {
+    margin-top: 15%;
+    color: #05386b;
+    text-shadow: 1px 1px 2px #fff
+    
+}
+
+.btn {
+    font-family: 'Acme', sans-serif;
+    background-color: #05386b !important; 
+}
+
+
+
+.image {
+    background-color: rgba(34, 104, 190, 0.28);
+    height: 200px;
+    width: 100%;
+}
+
+
+.image-tag {
+    height: 400px;
+    width: 100%;
+    // margin: 0 -90px;
+}
+
+.nav-wrapper {
+    background-color: rgb(5, 56, 107);
+}
+.room-list {
+    background-color: rgb(222, 218, 218);
+}
+
+
+
+.page-footer {
+    background-color: #05386b;
+}
+
+a.brand-logo {
+    color: #fff;
+    @media screen and (max-width: 400px) {
+        margin-left: -50px;
+    }
+}
+.form {
+    margin: 30px 25%;
+    padding: 20px;
+    background-color: rgba(38, 37, 43, 0.31); 
+    @media screen and (max-width: 600px) {
+        margin: 0px 5%;
+    }
+}
+.form > p {
+    color: #fff;
+}
+
+.log-in {
+    margin-top: 10%;
+}
+
+.login-img {
+    height: 80px;
+    width: 80px;
+    margin-left: 40% !important;
+    margin-bottom: 5%;
+}
+
+.label {
+    font-size: 20px;
+    color: #fff;
+}
+
+.placeholder {
+    font-size: 15px !important;
+    color: #fff !important;
+}
+
+.view-room {
+    color: #fff;
+}
+
+.single-room {
+    margin: 60px;
+
+}

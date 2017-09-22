@@ -1,11 +1,13 @@
 class RoomsController < ApplicationController
   before_action :find_room, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, only: [:index, :show]
+  before_action :require_admin, only: [:edit, :destroy]
     def index
       @rooms = Room.all.order("created_at DESC")
     end
 
     def show
-      
+
     end
 
     def new
