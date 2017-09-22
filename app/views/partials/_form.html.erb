@@ -1,6 +1,7 @@
 <%= simple_form_for @room do |f| %>
   <%= f.input :name, label: 'Room name', placeholder: 'Room', error: 'Room name is mandatory, please specify one' %>
-  <%= f.input :location, placeholder: 'specify floor and wing' %>
-  <%= f.input :capacity %>
-  <%= f.button :submit %>
+  <%= f.input :location, placeholder: 'specify floor and wing', error: 'Please specify location' %>
+  <%= f.input :capacity, error: 'Please specify capacity'%>
+  <%= f.input :image, placeholder: 'input image url'%>
+  <%= f.button :submit, data: { disable_with: "Loading..." } %>
 <% end %>

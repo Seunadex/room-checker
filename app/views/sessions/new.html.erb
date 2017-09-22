@@ -1,0 +1,17 @@
+<div class="auth">
+  <div class="overlay">
+    <div class="log-in">
+      <div class="container">
+        <div class="form">
+          <%= image_tag "login_key1.png", class: "login-img" %>
+          <%= simple_form_for(:session, url: login_path) do |f| %>
+            <%= f.input :email,autofocus: true, :placeholder => "your email here", class: "placeholder" %>
+            <%= f.input :password, :placeholder => "Password" %> 
+            <%= f.submit "Log in", class: "btn", data: { disable_with: "Logging in..." } %>
+          <% end %>
+          <p>Not registered yet? <%= link_to 'Sign up', signup_path %> here.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -19,18 +19,29 @@
           <div class="col m6">
             <p>Capacity: <%= @room.capacity %></p>
           </div>
+          <% if current_user && !current_user.admin? %>
           <div class="col m6">
             <p>Availability: <%= @room.availability %></p>
           </div>
-          <div class="col m6">
-            <button class="waves-effect blue waves-light btn"><i class="material-icons right">cloud</i>Book Room</button>
+          <% end %>
+          <% if current_user.admin? %>
+          <div class="col m12">
+            <p>Availability: <%= @room.availability %></p>
           </div>
+          <% end %>
+          <% if current_user && !current_user.admin? %>
+            <div class="col m6">
+              <button class="waves-effect blue waves-light btn"><i class="material-icons right">cloud</i>Book Room</button>
+            </div>
+          <% end %>
+          <% if current_user && current_user.admin? %>
           <div class="col m6">
             <%= link_to 'Edit', edit_room_path(@room), class: 'waves-effect blue waves-light btn' %>
           </div>
           <div class="col m6">
             <%= link_to 'Delete', room_path(@room), method: :delete, data: { confirm: 'Are you sure you want to delete the room?' }, class: 'waves-effect blue waves-light btn' %>
           </div>
+          <% end %>
       </div>
     </div>
   </div>
