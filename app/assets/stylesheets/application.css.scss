@@ -1,11 +1,12 @@
 // @import "materialize/components/color";
 // $primary-color: color("blue", "lighten-2") !default;
 // $secondary-color: color("yellow", "base") !default;
+@import "materialize";
 
 p.alert, p.notice {
     position: absolute;
     top: 70px;
-    width: 25%;
+    width: 35%;
     z-index: 999;
     background: rgba(135, 216, 211, 0.85);
     padding: 1rem 0;
@@ -16,21 +17,7 @@ p.alert, p.notice {
     color: #05386b;
     letter-spacing: 1px;
 }
-// p.alert, p.notice {
-//     padding: 2.5rem 0;
-//     text-align: center;
-//     margin: 0;
-//     font-size: 1.2rem;
-//     font-weight: 700;
-//     color: #fff;
-//     letter-spacing: 1px;
-// }
 
-@import "materialize";
-
-html, body{
-    min-height: 100%;
-  }
   body{
     position: relative;
     font-family: 'Lobster', cursive;
@@ -44,7 +31,6 @@ html, body{
     background-size: cover;
     height: 100vh;
     width: 100%;
-    margin-top: -20px;
 }
 
 div.auth {
@@ -115,7 +101,7 @@ a.brand-logo {
     }
 }
 .form {
-    margin: 30px 25%;
+    margin: 60px 25%;
     padding: 20px;
     background-color: rgba(38, 37, 43, 0.31); 
     @media screen and (max-width: 600px) {
@@ -154,4 +140,8 @@ a.brand-logo {
 .single-room {
     margin: 60px;
 
+}
+
+.current-user {
+    color: aqua;
 }
