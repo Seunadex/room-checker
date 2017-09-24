@@ -6,15 +6,14 @@ class SessionsController < ApplicationController
     @user = User.find_by_email(params[:session][:email])
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.id
-      redirect_to rooms_path
+      redirect_to rooms_path, alert: "Signed in successfully."
     else
-      flash.now[:danger] = 'Invalid email/password combination'
-      redirect_to '/login'
+      redirect_to '/login', alert: 'Invalid email/password combination'
     end 
   end 
   
   def destroy 
     session[:user_id] = nil 
-    redirect_to '/'
+    redirect_to '/', alert: "Signed out successfully."
   end
 end

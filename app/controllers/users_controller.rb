@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params) 
     if @user.save 
       session[:user_id] = @user.id 
-      redirect_to rooms_path 
+      redirect_to rooms_path, alert: "Welcome! You have signed up successfully."
     else 
       redirect_to '/signup' 
     end 

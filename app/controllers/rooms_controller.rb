@@ -17,7 +17,7 @@ class RoomsController < ApplicationController
     def create
       @room = Room.new(room_params)
         if @room.save
-          redirect_to rooms_path
+          redirect_to rooms_path, alert: 'You have successfully created a new room'
         else
           render 'new'
         end
@@ -29,7 +29,7 @@ class RoomsController < ApplicationController
 
     def update
       if @room.update(room_params)
-        redirect_to room_path(@room)
+        redirect_to room_path(@room), alert: 'You have successfully updated the new room'
       else
         render 'edit'
       end
@@ -37,7 +37,7 @@ class RoomsController < ApplicationController
 
     def destroy
       @room.destroy
-      redirect_to rooms_path
+      redirect_to rooms_path, alert: 'You have successfully deleted the room'
     end
 
     private
