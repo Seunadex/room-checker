@@ -1,5 +1,6 @@
+# WelcomeController
 class WelcomeController < ApplicationController
-    def index
-        # @welcome = Room.all
-    end
+  def index
+    # @welcome = Room.all
+  end
 end
