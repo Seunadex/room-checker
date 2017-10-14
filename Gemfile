@@ -15,7 +15,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+gem 'pg'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery', '~> 0.0.1'
@@ -42,6 +42,16 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'sqlite3'
+  gem "chromedriver-helper"
+  gem "codeclimate-test-reporter", "~> 1.0.0"
+  gem "database_cleaner"
+  gem "factory_girl_rails", "~> 4.7"
+  gem "rack_session_access"
+  gem "rails-controller-testing"
+  gem "rspec-rails", "~> 3.5"
+  gem "should_not"
+  gem "shoulda-matchers", "~> 3.1"
+  gem "simplecov"
 end
 
 group :development do
