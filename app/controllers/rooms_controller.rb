@@ -4,17 +4,19 @@ class RoomsController < ApplicationController
   before_action :require_user, only: %i[index show]
   before_action :require_admin, only: %i[edit destroy]
   def index
-    @rooms = Room.all.order('created_at DESC')
+    @rooms = Room.all.order('created_at DESC').decorate
   end
 
-  def show; end
+  def show
+    @room = Room.find(params[:id]).decorate
+  end
 
   def new
-    @room = Room.new
+    @room = Room.new.decorate
   end
 
   def create
-    @room = Room.new(room_params)
+    @room = Room.new(room_params).decorate
     if @room.save
       redirect_to rooms_path, alert: 'You have successfully created a new room'
     else
@@ -33,7 +35,7 @@ class RoomsController < ApplicationController
   end
 
   def destroy
-    @room.destroy
+    @room.destroy.decorate
     redirect_to rooms_path, alert: 'You have successfully deleted the room'
   end
 
@@ -44,6 +46,6 @@ class RoomsController < ApplicationController
   end
 
   def find_room
-    @room = Room.find(params[:id])
+    
   end
 end

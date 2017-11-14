@@ -1,8 +1,6 @@
 <%= render "partials/navbar" %>
 <h1>Rooms</h1>
-    <% if @rooms %>
     <p>Availability: <%= @rooms.count %></p>
-    <% end %>
 
 <div class="row">
     <% @rooms.each do |room| %>

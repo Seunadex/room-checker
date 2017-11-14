@@ -33,6 +33,7 @@ gem 'materialize-sass'
 # gem 'capistrano-rails', group: :development
 gem 'jquery-turbolinks'
 gem 'simple_form', '~> 3.5'
+gem 'draper'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to
